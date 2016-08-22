@@ -1,0 +1,95 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+@font-face {
+  font-family: 'CODE';
+  src: url("/assets/fonts/CODE Bold.otf") format("opentype");
+}
+
+.file-manager-wrapper{
+  padding-top: 50px;
+}
+
+.file-option,
+.global-option{
+  @include inline-list(15px);
+}
+
+.file-option li,
+.cs-breadcrumb li{
+  display: inline;
+}
+
+.global-option li{
+  display: inline-block;
+}
+
+.cs-breadcrumb{
+  @include inline-list(20px);
+  .active{
+    position: relative;
+    &::before{
+      content: '\f105';
+      font-family: FontAwesome;
+      position: absolute;
+      left: -14px;
+    }
+  }
+}
+
+/*
+* Table header
+*/
+.table-header{
+  border-bottom:1px solid #e8e8e8;
+  padding-bottom: 10px;
+  a{
+    color: #757575;
+  }
+}
+
+/*
+* File list
+*/
+
+.file-list-row{
+  padding:10px 0;
+  border-top: 1px solid #e8e8e8;
+
+  &:first-of-type{
+    border-top:none;
+  }
+
+  i.fa{
+    color: $base-color;
+  }
+
+  a{
+    color: $link-color;
+  }
+
+  span{
+    cursor: default;
+  }
+
+  a span{
+    cursor: pointer;
+  }
+
+  &:hover{
+    background-color: #FBE9E7;
+    border-top-color: #FFCCBC;
+  }
+
+  &:hover + .file-list-row{
+    border-top-color: #FFCCBC;
+  }
+
+  &:last-child{
+    border-bottom:1px solid #e8e8e8;
+  }
+
+  &:last-child:hover{
+    border-bottom-color: #FFCCBC; 
+  }
+}
