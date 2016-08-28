@@ -40,8 +40,9 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
-  'app/file-list',
-  'app/components/file-list',
+  'app/components/file-manager',
+  'app/components/file-manager/file-option',
+  'app/components/file-manager/file-list'
   /** @cli-barrel */
 ];
 
