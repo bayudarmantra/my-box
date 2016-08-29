@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['file-option.component.css']
 })
 export class FileOptionComponent implements OnInit {
+  showOption = false;
 
   ngOnInit() {
+  }
+
+  optionShowing()
+  {
+    this.showOption = !this.showOption;
   }
 
 }

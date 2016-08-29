@@ -1,5 +1,5 @@
 <!-- File Options -->
-<div class="file-option">
+<div class="file-option" *ngIf="showOption">
   <ul>
     <li>Filename</li>
     <li><a href="#">Open</a></li>
@@ -11,7 +11,7 @@
 </div>
 
 <!-- Header -->
-<div class="row table-header">
+<div class="row table-header" *ngIf="!showOption">
   <div class="col-md-4">
     <a href="#"><span>Name</span></a>
   </div>

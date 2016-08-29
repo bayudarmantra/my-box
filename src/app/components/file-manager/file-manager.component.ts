@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FileOptionComponent } from './file-option';
 import { FileListComponent } from './file-list';
 
@@ -9,5 +9,10 @@ import { FileListComponent } from './file-list';
   directives: [FileListComponent, FileOptionComponent]
 })
 export class FileManagerComponent{
+  @ViewChild(FileOptionComponent) fileOption: FileOptionComponent
 
+  test()
+  {
+    this.fileOption.showOption = !this.fileOption.showOption;
+  }
 }

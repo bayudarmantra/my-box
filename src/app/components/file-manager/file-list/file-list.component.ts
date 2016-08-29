@@ -10,5 +10,4 @@ export class FileListComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
